@@ -5,9 +5,18 @@
 <ul>
   <li *ngFor="let todo of todos">
     {{todo.id}} . {{ todo.title }} |
-    <button *ngIf="!todo.done">Concluído</button> |
-    <button *ngIf="todo.done">Refazer</button> |
+    <button *ngIf="!todo.done"(click)="markAsDone(todo)">Concluído</button> |
+    <button *ngIf="todo.done" (click)="markAsUndone(todo)">Refazer</button> |
     <button (click)="remove(todo)">Remover</button> |
   </li>
 </ul>
 
+<form [formGroup]="form">
+  <fieldset>
+    <label>Tarefa: </label>
+    <input type="text" placeholder="Título da Tarefa" maxlength="10" formControlName="title"> |
+    <button>Salvar</button>
+    <small *ngIf="form.controls.title.invalid && !form.controls.title.pristine"
+    >Este Campo deve conter entre 3 e 10 caracteres</small>
+  </fieldset>
+</form>
