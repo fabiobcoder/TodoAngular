@@ -17,7 +17,9 @@ button{
   cursor: pointer;
 }
 
-
+p {
+  text-align: center;
+}
 
 ul {
   text-align: left;
@@ -52,4 +54,15 @@ li>button{
 li>button:hover {
   opacity:  1;
   transition:  opacity 1s;
+}
+
+label {
+  color:  #fff;
+  text-shadow: 3px 4px 14px 0px rgba(0,0,0,.39);
+}
+
+h1 {
+  color:#fff;
+  text-shadow: 3px 4px 14px 0px rgba(0,0,0,.39);
+  box-shadow:  3px 4px 14px 0px rgba(0,0,0,.39);;
 }

@@ -25,10 +25,6 @@ export class AppComponent {
 
   this.load();
 
-    //this.todos.push(new Todo(1, 'Passear com o Cachorro', false));
-    //this.todos.push(new Todo(2, 'Supermercado', false));
-    //this.todos.push(new Todo(3, 'Cortar o Cabelo', true));
-
   }
 
   add(){
